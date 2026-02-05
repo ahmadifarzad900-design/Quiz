@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PSYC 201 Exam 1 - Interactive Review</title>
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f0f2f5; padding:40px; color:#333; }
+  h1 { text-align: center; color: #2c3e50; }
+  .section-title { margin-top: 40px; color: #34495e; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; }
+  .question { background:#fff; padding:20px; margin-bottom:20px; border-radius:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  .question b { font-size: 1.1em; display: block; margin-bottom: 10px; }
+  label { display: block; margin-bottom: 8px; cursor: pointer; }
+  input[type='radio'] { margin-right: 10px; transform: scale(1.2); }
+  button { background-color: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 1em; margin-top: 10px; transition: background 0.3s; }
+  button:hover { background-color: #2980b9; }
+  p[id$="_r"] { margin-top: 10px; font-size: 1.1em; }
+  .correct { color: #27ae60; font-weight:bold; background-color: #e8f8f5; padding: 10px; border-radius: 5px; border-left: 5px solid #27ae60; }
+  .incorrect { color: #c0392b; font-weight:bold; background-color: #fdedec; padding: 10px; border-radius: 5px; border-left: 5px solid #c0392b; }
+</style>
+<script>
+function check(q, correct){
+ let opts=document.getElementsByName(q);
+ let chosen="";
+ for(let o of opts){ if(o.checked) chosen=o.value; }
+ let r=document.getElementById(q+"_r");
+ if(chosen===""){ 
+   r.innerHTML="Please select an answer first."; 
+   r.className="incorrect";
+ } else if(chosen===correct){ 
+   r.innerHTML="Correct! ✅"; 
+   r.className="correct";
+ } else{ 
+   r.innerHTML="Incorrect ❌. Try again."; 
+   r.className="incorrect";
+ }
+}
+</script>
+</head>
+<body>
+
+<h1>PSYC 201 – Exam 1 Interactive Review</h1>
+<p style="text-align:center;">Select an answer for each question and click "Check" to see if you are right.</p>
+
+<h2 class="section-title">Section A: Multiple Choice (Definitions & History)</h2>
+
+<div class='question'><b>1. Psychology is best defined as the:</b>
+<label><input type='radio' name='q1' value='A'> A. study of the unconscious mind</label>
+<label><input type='radio' name='q1' value='B'> B. scientific study of behavior, mental processes, and brain functions</label>
+<label><input type='radio' name='q1' value='C'> C. analysis of human personality</label>
+<label><input type='radio' name='q1' value='D'> D. observation of social interactions</label>
+<button onclick="check('q1','B')">Check Answer</button><p id='q1_r'></p></div>
+
+<div class='question'><b>2. Why is psychology considered a “hub science”?</b>
+<label><input type='radio' name='q2' value='A'> A. It focuses mainly on biology</label>
+<label><input type='radio' name='q2' value='B'> B. It relies on philosophy</label>
+<label><input type='radio' name='q2' value='C'> C. It connects to many other fields that study human behavior</label>
+<label><input type='radio' name='q2' value='D'> D. It does not use experiments</label>
+<button onclick="check('q2','C')">Check Answer</button><p id='q2_r'></p></div>
+
+<div class='question'><b>3. Which is a major pitfall of introspection?</b>
+<label><input type='radio' name='q3' value='A'> A. It is too expensive</label>
+<label><input type='radio' name='q3' value='B'> B. It is unethical</label>
+<label><input type='radio' name='q3' value='C'> C. It is subjective and biased</label>
+<label><input type='radio' name='q3' value='D'> D. It cannot study mental processes</label>
+<button onclick="check('q3','C')">Check Answer</button><p id='q3_r'></p></div>
+
+<div class='question'><b>4. Which philosopher argued that knowledge comes from experience?</b>
+<label><input type='radio' name='q4' value='A'> A. Aristotle</label>
+<label><input type='radio' name='q4' value='B'> B. Plato</label>
+<label><input type='radio' name='q4' value='C'> C. John Locke</label>
+<label><input type='radio' name='q4' value='D'> D. Wilhelm Wundt</label>
+<button onclick="check('q4','C')">Check Answer</button><p id='q4_r'></p></div>
+
+<div class='question'><b>5. Who is considered the founder of scientific psychology?</b>
+<label><input type='radio' name='q5' value='A'> A. William James</label>
+<label><input type='radio' name='q5' value='B'> B. Sigmund Freud</label>
+<label><input type='radio' name='q5' value='C'> C. Edward Titchener</label>
+<label><input type='radio' name='q5' value='D'> D. Wilhelm Wundt</label>
+<button onclick="check('q5','D')">Check Answer</button><p id='q5_r'></p></div>
+
+<div class='question'><b>6. Voluntarism focused on:</b>
+<label><input type='radio' name='q6' value='A'> A. unconscious conflicts</label>
+<label><input type='radio' name='q6' value='B'> B. observable behavior only</label>
+<label><input type='radio' name='q6' value='C'> C. how the mind actively organizes conscious experience</label>
+<label><input type='radio' name='q6' value='D'> D. social learning</label>
+<button onclick="check('q6','C')">Check Answer</button><p id='q6_r'></p></div>
+
+<div class='question'><b>7. Edward Titchener used introspection to:</b>
+<label><input type='radio' name='q7' value='A'> A. study behavior in animals</label>
+<label><input type='radio' name='q7' value='B'> B. analyze unconscious motivation</label>
+<label><input type='radio' name='q7' value='C'> C. break consciousness into basic elements</label>
+<label><input type='radio' name='q7' value='D'> D. measure reaction time</label>
+<button onclick="check('q7','C')">Check Answer</button><p id='q7_r'></p></div>
+
+<div class='question'><b>8. Which approach focused on the purpose of behavior?</b>
+<label><input type='radio' name='q8' value='A'> A. Structuralism</label>
+<label><input type='radio' name='q8' value='B'> B. Functionalism</label>
+<label><input type='radio' name='q8' value='C'> C. Behaviourism</label>
+<label><input type='radio' name='q8' value='D'> D. Psychoanalysis</label>
+<button onclick="check('q8','B')">Check Answer</button><p id='q8_r'></p></div>
+
+<div class='question'><b>9. Which psychologist is associated with operant conditioning?</b>
+<label><input type='radio' name='q9' value='A'> A. Pavlov</label>
+<label><input type='radio' name='q9' value='B'> B. Watson</label>
+<label><input type='radio' name='q9' value='C'> C. Skinner</label>
+<label><input type='radio' name='q9' value='D'> D. Bandura</label>
+<button onclick="check('q9','C')">Check Answer</button><p id='q9_r'></p></div>
+
+<div class='question'><b>10. Cognition refers to:</b>
+<label><input type='radio' name='q10' value='A'> A. emotions only</label>
+<label><input type='radio' name='q10' value='B'> B. observable behavior</label>
+<label><input type='radio' name='q10' value='C'> C. mental processes involved in thinking and reasoning</label>
+<label><input type='radio' name='q10' value='D'> D. genetic inheritance</label>
+<button onclick="check('q10','C')">Check Answer</button><p id='q10_r'></p></div>
+
+<h2 class="section-title">Section B: Research Methods</h2>
+
+<div class='question'><b>11. Which research method involves an in-depth study of one individual?</b>
+<label><input type='radio' name='q11' value='A'> A. Survey</label>
+<label><input type='radio' name='q11' value='B'> B. Experiment</label>
+<label><input type='radio' name='q11' value='C'> C. Case study</label>
+<label><input type='radio' name='q11' value='D'> D. Correlation</label>
+<button onclick="check('q11','C')">Check Answer</button><p id='q11_r'></p></div>
+
+<div class='question'><b>12. A major limitation of case studies is that they:</b>
+<label><input type='radio' name='q12' value='A'> A. are unethical</label>
+<label><input type='radio' name='q12' value='B'> B. cannot show behavior</label>
+<label><input type='radio' name='q12' value='C'> C. are difficult to generalize</label>
+<label><input type='radio' name='q12' value='D'> D. lack detail</label>
+<button onclick="check('q12','C')">Check Answer</button><p id='q12_r'></p></div>
+
+<div class='question'><b>13. Observing children playing on a playground without interfering is an example of:</b>
+<label><input type='radio' name='q13' value='A'> A. survey research</label>
+<label><input type='radio' name='q13' value='B'> B. naturalistic observation</label>
+<label><input type='radio' name='q13' value='C'> C. experiment</label>
+<label><input type='radio' name='q13' value='D'> D. interview</label>
+<button onclick="check('q13','B')">Check Answer</button><p id='q13_r'></p></div>
+
+<div class='question'><b>14. Reactivity in naturalistic observation can be reduced by:</b>
+<label><input type='radio' name='q14' value='A'> A. manipulating variables</label>
+<label><input type='radio' name='q14' value='B'> B. using random assignment</label>
+<label><input type='radio' name='q14' value='C'> C. unobtrusive observation</label>
+<label><input type='radio' name='q14' value='D'> D. increasing sample size</label>
+<button onclick="check('q14','C')">Check Answer</button><p id='q14_r'></p></div>
+
+<div class='question'><b>15. Which method gathers a small amount of information from many people?</b>
+<label><input type='radio' name='q15' value='A'> A. Interview</label>
+<label><input type='radio' name='q15' value='B'> B. Case study</label>
+<label><input type='radio' name='q15' value='C'> C. Survey</label>
+<label><input type='radio' name='q15' value='D'> D. Focus group</label>
+<button onclick="check('q15','C')">Check Answer</button><p id='q15_r'></p></div>
+
+<div class='question'><b>16. A correlation coefficient of –0.85 indicates:</b>
+<label><input type='radio' name='q16' value='A'> A. no relationship</label>
+<label><input type='radio' name='q16' value='B'> B. a strong negative relationship</label>
+<label><input type='radio' name='q16' value='C'> C. a weak positive relationship</label>
+<label><input type='radio' name='q16' value='D'> D. causation</label>
+<button onclick="check('q16','B')">Check Answer</button><p id='q16_r'></p></div>
+
+<div class='question'><b>17. Why can correlational studies not determine causation?</b>
+<label><input type='radio' name='q17' value='A'> A. They use small samples</label>
+<label><input type='radio' name='q17' value='B'> B. They are unethical</label>
+<label><input type='radio' name='q17' value='C'> C. Third variables may be involved</label>
+<label><input type='radio' name='q17' value='D'> D. They lack statistics</label>
+<button onclick="check('q17','C')">Check Answer</button><p id='q17_r'></p></div>
+
+<h2 class="section-title">Section C: Experimental Research</h2>
+
+<div class='question'><b>18. In an experiment, the independent variable is the:</b>
+<label><input type='radio' name='q18' value='A'> A. outcome measured</label>
+<label><input type='radio' name='q18' value='B'> B. variable that is manipulated</label>
+<label><input type='radio' name='q18' value='C'> C. control group</label>
+<label><input type='radio' name='q18' value='D'> D. participant response</label>
+<button onclick="check('q18','B')">Check Answer</button><p id='q18_r'></p></div>
+
+<div class='question'><b>19. Random assignment increases:</b>
+<label><input type='radio' name='q19' value='A'> A. external validity</label>
+<label><input type='radio' name='q19' value='B'> B. bias</label>
+<label><input type='radio' name='q19' value='C'> C. internal validity</label>
+<label><input type='radio' name='q19' value='D'> D. reactivity</label>
+<button onclick="check('q19','C')">Check Answer</button><p id='q19_r'></p></div>
+
+<div class='question'><b>20. Why are experiments considered the “gold standard”?</b>
+<label><input type='radio' name='q20' value='A'> A. They are easy to conduct</label>
+<label><input type='radio' name='q20' value='B'> B. They allow cause-and-effect conclusions</label>
+<label><input type='radio' name='q20' value='C'> C. They involve surveys</label>
+<label><input type='radio' name='q20' value='D'> D. They avoid ethical issues</label>
+<button onclick="check('q20','B')">Check Answer</button><p id='q20_r'></p></div>
+
+<div class='question'><b>21. A placebo is used to:</b>
+<label><input type='radio' name='q21' value='A'> A. treat participants</label>
+<label><input type='radio' name='q21' value='B'> B. manipulate the IV</label>
+<label><input type='radio' name='q21' value='C'> C. control for expectations</label>
+<label><input type='radio' name='q21' value='D'> D. increase validity</label>
+<button onclick="check('q21','C')">Check Answer</button><p id='q21_r'></p></div>
+
+<div class='question'><b>22. In a double-blind study:</b>
+<label><input type='radio' name='q22' value='A'> A. participants know the condition</label>
+<label><input type='radio' name='q22' value='B'> B. researchers know the condition</label>
+<label><input type='radio' name='q22' value='C'> C. neither participants nor researchers know the condition</label>
+<label><input type='radio' name='q22' value='D'> D. everyone knows the condition</label>
+<button onclick="check('q22','C')">Check Answer</button><p id='q22_r'></p></div>
+
+<div class='question'><b>23. Quasi-experimental research differs from true experiments because it:</b>
+<label><input type='radio' name='q23' value='A'> A. uses random assignment</label>
+<label><input type='radio' name='q23' value='B'> B. manipulates the IV</label>
+<label><input type='radio' name='q23' value='C'> C. lacks random assignment</label>
+<label><input type='radio' name='q23' value='D'> D. is descriptive only</label>
+<button onclick="check('q23','C')">Check Answer</button><p id='q23_r'></p></div>
+
+<div class='question'><b>24. A meta-analysis is best described as:</b>
+<label><input type='radio' name='q24' value='A'> A. a single large experiment</label>
+<label><input type='radio' name='q24' value='B'> B. a review combining results from many studies</label>
+<label><input type='radio' name='q24' value='C'> C. an observational method</label>
+<label><input type='radio' name='q24' value='D'> D. a case study</label>
+<button onclick="check('q24','B')">Check Answer</button><p id='q24_r'></p></div>
+
+<h2 class="section-title">Section D: Development & Measurement</h2>
+
+<div class='question'><b>25. Studying different age groups at one point in time is called:</b>
+<label><input type='radio' name='q25' value='A'> A. longitudinal</label>
+<label><input type='radio' name='q25' value='B'> B. cross-sectional</label>
+<label><input type='radio' name='q25' value='C'> C. sequential</label>
+<label><input type='radio' name='q25' value='D'> D. experimental</label>
+<button onclick="check('q25','B')">Check Answer</button><p id='q25_r'></p></div>
+
+<div class='question'><b>26. Following the same people over many years is a:</b>
+<label><input type='radio' name='q26' value='A'> A. cross-sectional study</label>
+<label><input type='radio' name='q26' value='B'> B. survey</label>
+<label><input type='radio' name='q26' value='C'> C. longitudinal study</label>
+<label><input type='radio' name='q26' value='D'> D. case study</label>
+<button onclick="check('q26','C')">Check Answer</button><p id='q26_r'></p></div>
+
+<div class='question'><b>27. Reliability refers to:</b>
+<label><input type='radio' name='q27' value='A'> A. accuracy of a measure</label>
+<label><input type='radio' name='q27' value='B'> B. consistency of a measure</label>
+<label><input type='radio' name='q27' value='C'> C. importance of results</label>
+<label><input type='radio' name='q27' value='D'> D. validity of conclusions</label>
+<button onclick="check('q27','B')">Check Answer</button><p id='q27_r'></p></div>
+
+<div class='question'><b>28. A test that measures the same thing consistently but not what it claims is:</b>
+<label><input type='radio' name='q28' value='A'> A. valid and reliable</label>
+<label><input type='radio' name='q28' value='B'> B. valid but not reliable</label>
+<label><input type='radio' name='q28' value='C'> C. reliable but not valid</label>
+<label><input type='radio' name='q28' value='D'> D. neither valid nor reliable</label>
+<button onclick="check('q28','C')">Check Answer</button><p id='q28_r'></p></div>
+
+<h2 class="section-title">Section E: Statistics & Ethics</h2>
+
+<div class='question'><b>29. In a normal distribution:</b>
+<label><input type='radio' name='q29' value='A'> A. scores are randomly scattered</label>
+<label><input type='radio' name='q29' value='B'> B. the mean, median, and mode differ</label>
+<label><input type='radio' name='q29' value='C'> C. most scores cluster around the mean</label>
+<label><input type='radio' name='q29' value='D'> D. scores form a flat line</label>
+<button onclick="check('q29','C')">Check Answer</button><p id='q29_r'></p></div>
+
+<div class='question'><b>30. Descriptive statistics are used to:</b>
+<label><input type='radio' name='q30' value='A'> A. test hypotheses</label>
+<label><input type='radio' name='q30' value='B'> B. determine causation</label>
+<label><input type='radio' name='q30' value='C'> C. summarize data</label>
+<label><input type='radio' name='q30' value='D'> D. generalize to populations</label>
+<button onclick="check('q30','C')">Check Answer</button><p id='q30_r'></p></div>
+
+<div class='question'><b>31. Inferential statistics allow researchers to:</b>
+<label><input type='radio' name='q31' value='A'> A. organize data</label>
+<label><input type='radio' name='q31' value='B'> B. draw conclusions from samples</label>
+<label><input type='radio' name='q31' value='C'> C. observe behavior</label>
+<label><input type='radio' name='q31' value='D'> D. calculate means only</label>
+<button onclick="check('q31','B')">Check Answer</button><p id='q31_r'></p></div>
+
+<div class='question'><b>32. The overall goal of ethics in research is to:</b>
+<label><input type='radio' name='q32' value='A'> A. increase funding</label>
+<label><input type='radio' name='q32' value='B'> B. avoid statistics</label>
+<label><input type='radio' name='q32' value='C'> C. protect participants’ rights and dignity</label>
+<label><input type='radio' name='q32' value='D'> D. publish results</label>
+<button onclick="check('q32','C')">Check Answer</button><p id='q32_r'></p></div>
+
+<div class='question'><b>33. Research Ethics Boards (REBs) exist to:</b>
+<label><input type='radio' name='q33' value='A'> A. conduct experiments</label>
+<label><input type='radio' name='q33' value='B'> B. publish studies</label>
+<label><input type='radio' name='q33' value='C'> C. review research for ethical standards</label>
+<label><input type='radio' name='q33' value='D'> D. recruit participants</label>
+<button onclick="check('q33','C')">Check Answer</button><p id='q33_r'></p></div>
+
+<div class='question'><b>34. The “3 Rs” apply to:</b>
+<label><input type='radio' name='q34' value='A'> A. human participants</label>
+<label><input type='radio' name='q34' value='B'> B. surveys</label>
+<label><input type='radio' name='q34' value='C'> C. animal research</label>
+<label><input type='radio' name='q34' value='D'> D. correlational studies</label>
+<button onclick="check('q34','C')">Check Answer</button><p id='q34_r'></p></div>
+
+<div class='question'><b>35. Which is NOT one of the 3 Rs?</b>
+<label><input type='radio' name='q35' value='A'> A. Replacement</label>
+<label><input type='radio' name='q35' value='B'> B. Reduction</label>
+<label><input type='radio' name='q35' value='C'> C. Refinement</label>
+<label><input type='radio' name='q35' value='D'> D. Replication</label>
+<button onclick="check('q35','D')">Check Answer</button><p id='q35_r'></p></div>
+
+</body>
+</html>
